@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100%;
+        }
+        div{
+            height: 50vh;
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.247);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block title %}Home{% endblock %}
+    {% block content %}
+    <center><h2>Login</h2></center>
+    <center><div><form action="" method="post">
+       <center>{% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit" style="background-color: black; color: palevioletred;">Log in</button>
+        <!-- <h4>New user? <a href="./signin.html">Sign in</a></h4> -->
+       </center>
+    </form>
+    </div></center>
+    {% endblock %}
+</body>
+</html>
