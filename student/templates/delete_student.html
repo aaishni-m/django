@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Student</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100%;
+        }
+        div{
+            height: 500px;
+            width: 500px;
+            background-color: rgba(0, 0, 0, 0.356);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* padding: 30px; */
+
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Delete Student</h1></center>
+    <center><h5><a href="{%url 'home' %}">Return Home</a></h5></center>
+    <center><div><form method="POST">
+        {% csrf_token %}
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+        <br><br>
+        <button type="submit" style="background-color: black; color: palevioletred;">Delete Student</button>
+    </form>
+    </div>
+    </center>
+</body>
+</html>
